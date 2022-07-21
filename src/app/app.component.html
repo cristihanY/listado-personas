@@ -1,0 +1,23 @@
+<div class="continer-Inicio">
+
+  <div>
+    <div *ngIf="!(isAutenticado())" >
+      <button class="btn-registrarse-126"type="submit" style="cursor: pointer;" routerLink="/login">Login</button>
+    </div>
+    
+    <div *ngIf="(isAutenticado())" class="Button-Salir">
+      <button class="btn-registrarse-125"type="submit" style="cursor: pointer;" (click)="salir()">Salir</button>
+    </div>
+  </div>
+  <div >
+    <h1 id="titulo-General">{{ titulo }}</h1>
+  </div>
+  <div class="LogoUnsch-Principal">
+    <img src="../assets/LogoUnsch.png" alt="LogoUnsch">
+  </div>
+</div>
+
+
+
+
+<router-outlet></router-outlet>

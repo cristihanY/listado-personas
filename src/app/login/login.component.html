@@ -1,0 +1,18 @@
+<div class="box-1">
+
+    <form class="item" #f="ngForm" (ngSubmit)="f.form.valid && login(f)">
+        <div>
+            <div id="entrada-email" >
+                <label id="nombre-labels-1" for="email">Email</label>
+                <input id="form-control-registrarse-125" type="email" name="email" placeholder="Email" ngModel  required size="20">
+            </div>
+            <div id="entrada-password" >
+                <label id="nombre-labels-2" for="email">Password</label>
+                <input id="form-control-registrarse-125"  type="password" name="password" placeholder="Password" ngModel required size="15">
+            </div>
+        </div>
+
+        <button class="btn-registrarse-124"type="submit" style="cursor: pointer;">Ingresar</button>
+    </form>
+
+</div>

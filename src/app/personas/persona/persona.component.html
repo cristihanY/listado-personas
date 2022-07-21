@@ -1,0 +1,17 @@
+<div class="item-nombres">
+  <ul>
+    <li id="lista-Item">
+      <div class="containerNombre">
+        <div class="EditarPersona-Link">
+          <a  id="a-Lista-editar"[routerLink]="['/personas', indice]" [queryParams]="{modoEdicion:'1'}">
+            Editar
+          </a>
+        </div>
+        <div>
+          <a >{{ persona.nombre }} {{ persona.apellido }}</a>
+        </div>
+
+      </div>
+    </li>
+  </ul>
+</div>
