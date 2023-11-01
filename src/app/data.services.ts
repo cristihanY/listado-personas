@@ -15,20 +15,15 @@ export class DataServices{
         const token = this.loginService.getIdToken();
         return this.httpClient.get('https://listado-personas-f36be-default-rtdb.firebaseio.com/datos.json?auth='+ token);
     }
-
     // Guardar Personas
-
     guardarPersonas(personas:Persona[]){
         const token = this.loginService.getIdToken();
         this.httpClient.put('https://listado-personas-f36be-default-rtdb.firebaseio.com/datos.json?auth='+ token, personas)
         .subscribe(
             response => console.log("Resultado de guardar personas" + response),
-    
             error => console.log("Error al guardar personas: " + error)
         )
-
     }
-
     modificarPersonas( index:number, personas:Persona){
         const token = this.loginService.getIdToken();
         let url: string;
@@ -39,7 +34,6 @@ export class DataServices{
             error => console.log("Error al modificar personas "+ error)
         )
     }
-
     eliminarPersonas( index:number){
         const token = this.loginService.getIdToken();
         let url: string;
